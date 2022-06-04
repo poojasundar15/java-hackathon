@@ -1,0 +1,12 @@
+ create table students(id varchar(10) primary key,name varchar(25));
+
+create table courses(id varchar(10) primary key, name varchar(25));
+
+create table marks(id serial primary key, course_id varchar(10) references courses(id), reg_no varchar(10) references students(id) ,cat1 numeric(3),cat2 numeric(3),da1 numeric(3),da2 numeric(3),fat numeric(3),grade varchar(1));	
+
+insert into students values('21MCA0023', 'sandeep');
+insert into students values('21MCA0094', 'manibharathi');
+insert into students values('21MCA0098', 'yogesh');
+insert into students values('21MCA0100', 'kanish');
+
+insert into courses values('MAT101','Maths');
